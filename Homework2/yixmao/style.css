@@ -1,0 +1,37 @@
+/* styles.css — Responsive Dashboard Layout */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .dashboard {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+      "histogram scatter"
+      "sankey    sankey";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px; /* small gutter */
+    box-sizing: border-box;
+  }
+  
+  .chart {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #histogram { grid-area: histogram; }
+  #scatter   { grid-area: scatter; }
+  #sankey    { grid-area: sankey; }
+  
+  .chart svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
